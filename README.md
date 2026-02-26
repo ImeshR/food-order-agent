@@ -24,7 +24,10 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. Includes a **voice AI food agent** and support for **web calls** via the [Twilio Voice JavaScript SDK](https://www.twilio.com/docs/voice/sdks/javascript).
+
+- **Phone calls:** Twilio calls your webhook `POST /voice` with speech results; the app uses AI and returns TwiML.
+- **Web calls:** Browser gets a token from `GET /voice/token`, then uses the Twilio Client SDK to make/receive calls; Twilio still uses your `POST /voice` TwiML. See [docs/VOICE-WEB-CALLS.md](docs/VOICE-WEB-CALLS.md) for setup and the test page at `/voice-client.html`.
 
 ## Installation
 
